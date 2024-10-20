@@ -25,7 +25,8 @@ export default function VideoSlider() {
     }
 
     return (
-        <div className="relative mx-auto max-w-5xl px-4 py-8 bg-gray-900">
+        <div className="relative mx-auto max-w-5xl px-4 py-8 ">
+            <div className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2 text-center">VIDEOS</div>
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <div className="absolute inset-0">
                     <iframe

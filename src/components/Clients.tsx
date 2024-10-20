@@ -1,18 +1,17 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 
+import accenture from "@/assets/accenture.png";
 import deloitte from "@/assets/deloitte.png";
 import hitachi from "@/assets/hitachi.png";
-import tesco from "@/assets/tesco.png";
-import saintGobain from "@/assets/saintGobain.png";
-import accenture from "@/assets/accenture.png";
-import sutherland from "@/assets/sutherland.svg";
-import mindtree from "@/assets/mindtree.svg";
 import ibm from "@/assets/ibm.png";
 import itcLimited from "@/assets/itcLimited.png";
+import mindtree from "@/assets/mindtree.svg";
+import saintGobain from "@/assets/saintGobain.png";
+import sutherland from "@/assets/sutherland.svg";
 import taj from "@/assets/taj.png";
+import tesco from "@/assets/tesco.png";
 
 interface Logo {
   name: string;
@@ -35,8 +34,8 @@ const logos: Logo[] = [
 
 const Clients = () => {
   return (
-    <div className="w-full bg-gradient-to-b from-gray-900 to-gray-800 py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full overflow-hidden">
+      <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">
             Esteemed Clients
@@ -60,9 +59,8 @@ const Clients = () => {
                     alt={logo.name}
                     width={150}
                     height={50}
-                    className={`max-w-full max-h-full object-contain transition-all duration-300 ease-in-out hover:scale-110 ${
-                      logo.makeWhite ? "filter-white" : ""
-                    }`}
+                    className={`max-w-full max-h-full object-contain transition-all duration-300 ease-in-out hover:scale-110 ${logo.makeWhite ? "filter-white" : ""
+                      }`}
                   />
                 </div>
               ))}
@@ -78,9 +76,8 @@ const Clients = () => {
                     alt={logo.name}
                     width={150}
                     height={50}
-                    className={`max-w-full max-h-full object-contain transition-all duration-300 ease-in-out hover:scale-110 ${
-                      logo.makeWhite ? "filter-white" : ""
-                    }`}
+                    className={`max-w-full max-h-full object-contain transition-all duration-300 ease-in-out hover:scale-110 ${logo.makeWhite ? "filter-white" : ""
+                      }`}
                   />
                 </div>
               ))}

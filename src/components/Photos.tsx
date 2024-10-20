@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import React, { useState } from "react";
 
 import photos1 from "@/assets/photos1.jpg";
 import photos2 from "@/assets/photos2.jpg";
@@ -50,8 +50,8 @@ const TypewriterEffect = ({ text }: { text: string }) => {
 
 export default function UnforgettableMoments() {
   return (
-    <div className="relative w-full bg-black py-20 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-30">
+    <div className="relative w-full py-20 overflow-hidden">
+      {/* <div className="absolute inset-0 z-0 opacity-30">
         {[...Array(100)].map((_, i) => (
           <div
             key={i}
@@ -65,7 +65,7 @@ export default function UnforgettableMoments() {
             }}
           />
         ))}
-      </div>
+      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
