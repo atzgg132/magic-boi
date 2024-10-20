@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 
 import Photos from "../components/Photos";
 import Clients from "../components/Clients";
@@ -6,6 +8,7 @@ import Clients from "../components/Clients";
 export default function Home() {
   return (
     <>
+      <AutoScrollingTestimonialCarousel />
       <Photos />
       <Clients />
     </>
