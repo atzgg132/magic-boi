@@ -98,7 +98,7 @@ const Clients = () => {
           }
         }
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 45s linear infinite;
         }
         .filter-white {
           filter: brightness(0) invert(1);
