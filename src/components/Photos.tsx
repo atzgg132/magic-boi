@@ -89,24 +89,29 @@ export default function UnforgettableMoments() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Card className=" rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <CardContent className="bg-zinc-900 rounded-xl p-0 relative">
-                  <Image
-                    src={moment.image}
-                    alt={moment.title}
-                    className="w-full h-full object-cover"
-                    width={600}
-                    height={300}
-                    placeholder="blur"
-                  />
-                  <div className="p-4 pb-2 absolute bottom-0 left-0">
-                    <h3 className="text-2xl font-semibold text-white mb-2">
+              <Card className="rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <CardContent className="bg-zinc-900 rounded-xl p-1 relative">
+                  <div className="relative">
+                    <Image
+                      src={moment.image}
+                      alt={moment.title}
+                      className="w-full h-full object-cover hover:opacity-30 rounded-xl"
+                      width={600}
+                      height={300}
+                      placeholder="blur"
+                    />
+                    {/* Add a gradient overlay at the bottom */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                  </div>
+                  <div className="p-4 pb-2 absolute bottom-1 left-0">
+                    <h3 className="text-2xl font-medium text-white tracking-wider">
                       {moment.title}
                     </h3>
                     <p className="text-gray-400">{moment.description}</p>
                   </div>
                 </CardContent>
               </Card>
+
             </motion.div>
           ))}
         </div>
@@ -120,7 +125,7 @@ export default function UnforgettableMoments() {
           <Button
             variant="outline"
             size="lg"
-            className="bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-purple-400 to-pink-600 text-white  transition-all duration-300 transform hover:scale-105 text-lg"
           >
             KNOW MORE
           </Button>

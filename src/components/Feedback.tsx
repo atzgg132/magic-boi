@@ -80,10 +80,10 @@ export default function AutoScrollingTestimonialCarousel() {
   }, [nextTestimonial])
 
   return (
-    <section className="py-16 ">
+    <section className="pb-16 " id="feedback">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto relative">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white uppercase">Client Testimonials</h2>
+          <h2 className="text-4xl md:text-5xl tracking-widest font-thin text-center mb-8 text-white uppercase">Client Testimonials</h2>
           <div className="absolute top-0 right-0 space-x-2 z-10">
             <button
               onClick={prevTestimonial}

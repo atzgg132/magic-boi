@@ -25,8 +25,8 @@ export default function VideoSlider() {
     }
 
     return (
-        <div className="relative mx-auto max-w-5xl px-4 py-8 ">
-            <div className="text-4xl md:text-5xl font-thin tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2 text-center">VIDEOS</div>
+        <div className="relative mx-auto max-w-5xl px-4 py-8 mt-6 " id="videos">
+            <div className="text-4xl md:text-5xl font-thin tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4 text-center">VIDEOS</div>
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <div className="absolute inset-0">
                     <iframe
@@ -41,7 +41,7 @@ export default function VideoSlider() {
             <h2 className="mt-4 text-center text-xl font-semibold text-white">
                 {videos[currentIndex].title}
             </h2>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex justify-between ">
                 <button
                     onClick={goToPrevious}
                     className="rounded-full bg-white cursor-pointer p-1 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
@@ -49,7 +49,7 @@ export default function VideoSlider() {
                 >
                     <ChevronLeft className="h-8 w-8 text-gray-800" />
                 </button>
-                <div className="mt-4 flex justify-center space-x-2">
+                <div className="mt-4 flex justify-center space-x-2 cursor-pointer">
                     {videos.map((_, index) => (
                         <button
                             key={index}

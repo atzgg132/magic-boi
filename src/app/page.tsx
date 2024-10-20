@@ -2,6 +2,7 @@
 
 import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 
+import Form from "@/components/Form";
 import VideoSlider from "@/components/Videos";
 import About from "@/components/about";
 import Clients from "../components/Clients";
@@ -32,6 +33,7 @@ export default function Home() {
       <VideoSlider />
       <Photos />
       <AutoScrollingTestimonialCarousel />
+      <Form />
     </div>
   );
 }

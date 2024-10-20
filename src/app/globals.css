@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* Apply the imported font globally */
+}
 
 @layer base {
   :root {
@@ -64,20 +71,24 @@
     @apply border-border;
   }
 
-  body {
+  /* body {
     @apply bg-background text-foreground;
     cursor: none;
-  }
+  } */
+
   @media (max-width: 768px) {
     .landing-image {
       object-fit: cover;
       width: 100%;
-      height: calc(100vh - 50px); /* Slightly smaller height */
+      height: calc(100vh - 50px);
+      /* Slightly smaller height */
     }
 
     .explore-text {
-      top: 60%; /* Move the text down a little */
-      transform: translateY(-50%); /* Keep it centered vertically */
+      top: 60%;
+      /* Move the text down a little */
+      transform: translateY(-50%);
+      /* Keep it centered vertically */
     }
   }
 }

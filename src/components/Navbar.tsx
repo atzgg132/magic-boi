@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronRight, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const menuItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
+  { name: "About", href: "#about" },
+  { name: "Videos", href: "#videos" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -28,8 +28,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-white text-2xl font-bold">
-              MINDSCAPE
+            <Link href="/" className="text-white text-2xl font-bold tracking-widest">
+              VISH
             </Link>
           </div>
           <div className="hidden md:block">
