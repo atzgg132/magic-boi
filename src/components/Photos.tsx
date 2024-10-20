@@ -73,8 +73,8 @@ export default function UnforgettableMoments() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Unforgettable <span className="text-purple-500">Moments</span>
+          <h2 className="text-4xl md:text-5xl font-thin text-white mb-4 uppercase tracking-widest">
+            Unforgettable <span className="text-4xl md:text-5xl font-thin  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">Moments</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             <TypewriterEffect text="Immerse yourself in the promise of an extraordinary, captivating experience, destined to linger as a cherished memory" />
@@ -89,17 +89,17 @@ export default function UnforgettableMoments() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Card className="bg-gradient-to-br from-purple-600 to-indigo-600 p-1 rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <CardContent className="bg-zinc-900 rounded-xl p-0">
+              <Card className=" rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <CardContent className="bg-zinc-900 rounded-xl p-0 relative">
                   <Image
                     src={moment.image}
                     alt={moment.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-full object-cover"
                     width={600}
                     height={300}
                     placeholder="blur"
                   />
-                  <div className="p-4">
+                  <div className="p-4 pb-2 absolute bottom-0 left-0">
                     <h3 className="text-2xl font-semibold text-white mb-2">
                       {moment.title}
                     </h3>

@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <div className="bg-black  realtive">
       <div className="fixed inset-0 z-0 opacity-30">
-        {[...Array(200)].map((_, i) => (
+        {[...Array(300)].map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-purple-500"
+            className="absolute rounded-full bg-purple-400"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,

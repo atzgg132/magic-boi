@@ -35,9 +35,9 @@ const logos: Logo[] = [
 const Clients = () => {
   return (
     <div className="w-full overflow-hidden">
-      <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">
+      <div className="max-w-[95rem] mx-auto sm:px-6 lg:px-8">
+        <div className="text-center md:mb-12 mb-6">
+          <h2 className="text-4xl md:text-5xl font-thin uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-1">
             Esteemed Clients
           </h2>
           <p className="text-xl text-gray-300 font-light">
