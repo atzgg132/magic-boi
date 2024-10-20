@@ -25,7 +25,8 @@ export default function VideoSlider() {
     }
 
     return (
-        <div className="relative mx-auto max-w-5xl px-4 py-8 bg-gray-900">
+        <div className="relative mx-auto max-w-5xl px-4 py-8 ">
+            <div className="text-4xl md:text-5xl font-thin tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2 text-center">VIDEOS</div>
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <div className="absolute inset-0">
                     <iframe
@@ -43,10 +44,10 @@ export default function VideoSlider() {
             <div className="mt-4 flex justify-between">
                 <button
                     onClick={goToPrevious}
-                    className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                    className="rounded-full bg-white cursor-pointer p-1 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
                     aria-label="Previous video"
                 >
-                    <ChevronLeft className="h-6 w-6 text-gray-800" />
+                    <ChevronLeft className="h-8 w-8 text-gray-800" />
                 </button>
                 <div className="mt-4 flex justify-center space-x-2">
                     {videos.map((_, index) => (
@@ -61,10 +62,10 @@ export default function VideoSlider() {
                 </div>
                 <button
                     onClick={goToNext}
-                    className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                    className="rounded-full cursor-pointer bg-white p-1 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
                     aria-label="Next video"
                 >
-                    <ChevronRight className="h-6 w-6 text-gray-800" />
+                    <ChevronRight className="h-8 w-8 text-gray-800" />
                 </button>
             </div>
         </div>

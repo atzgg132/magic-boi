@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import {
   motion,
   useScroll,
-  useTransform,
-  AnimatePresence,
+  useTransform
 } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { Button } from "@/components/ui/button";
-import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 import landing from "@/assets/landing.jpg";
 
@@ -77,19 +75,23 @@ export default function Landing() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center uppercase tracking-widest mt-40 z-10 mix-blend-difference"
+          className="text-center uppercase tracking-widest mt-44 z-10 mix-blend-difference"
         >
-          <h1 className="text-7xl md:text-9xl font-extrabold">
-            Mentalist <span className="text-purple-500">Vish</span>{" "}
+          <h1 className="text-6xl md:text-9xl font-extrabold">
+            Mentalist <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-1">Vish</span>{" "}
             {/* Main focus */}
           </h1>
-          <p className="text-3xl md:text-4xl mt-4 text-gray-300">
-            Explore the Mindscape {/* Supporting tagline */}
+          <p className="text-xl md:text-4xl mt-4 text-gray-300">
+            Unleash Your Imagination {/* Supporting tagline */}
+          </p>
+          <p className="text-sm md:text-2xl mt-2 text-gray-300 px-2">
+            Step into the mystical world of Mentalist Vish, where the
+            impossible becomes reality. {/* Supporting tagline */}
           </p>
         </motion.div>
       </motion.div>
 
-      <section className="relative bg-gray-900 py-24">
+      {/* <section className="relative bg-gray-900 py-24">
         <div className="container mx-auto px-6">
           <motion.div
             ref={contentRef}
@@ -110,29 +112,9 @@ export default function Landing() {
             </Button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <h4 className="text-2xl font-bold">VISH</h4>{" "}
-              {/* Name repeated for consistency */}
-              <p className="mt-2">Mentalist &amp; Master of Illusion</p>{" "}
-              {/* Tagline in footer */}
-            </div>
-            <div className="flex space-x-6">
-              <Instagram className="w-6 h-6" />
-              <Twitter className="w-6 h-6" />
-              <Facebook className="w-6 h-6" />
-              <Youtube className="w-6 h-6" />
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; 2023 Mentalist Vish. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+
     </main>
   );
 }

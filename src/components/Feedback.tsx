@@ -80,7 +80,7 @@ export default function AutoScrollingTestimonialCarousel() {
   }, [nextTestimonial])
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto relative">
           <h2 className="text-3xl font-bold text-center mb-8 text-white uppercase">Client Testimonials</h2>
@@ -104,7 +104,7 @@ export default function AutoScrollingTestimonialCarousel() {
               </svg>
             </button>
           </div>
-          <div className="bg-gray-800 border-gray-700 shadow-lg rounded-lg overflow-hidden">
+          <div className="bg-gray-900 border-gray-700 shadow-lg rounded-lg overflow-hidden">
             <div className="relative h-[290px]">
               {testimonials.map((testimonial, index) => (
                 <div
