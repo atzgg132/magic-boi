@@ -2,10 +2,13 @@
 
 import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 
+import Clients from "../components/Clients";
+
 export default function Home() {
   return (
-    <div>
+    <>
       <AutoScrollingTestimonialCarousel />
-    </div>
-  )
+      <Clients />
+    </>
+  );
 }
