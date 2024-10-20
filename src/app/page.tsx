@@ -1,5 +1,11 @@
-import Image from "next/image";
+"use client";
+
+import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 
 export default function Home() {
-  return <></>;
+  return (
+    <div>
+      <AutoScrollingTestimonialCarousel />
+    </div>
+  )
 }
