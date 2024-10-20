@@ -5,6 +5,7 @@ import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 import VideoSlider from "@/components/Videos";
 import About from "@/components/about";
 import Clients from "../components/Clients";
+import Landing from "../components/Landing";
 import Photos from "../components/Photos";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
           />
         ))}
       </div>
+      <Landing />
       <About />
       <Clients />
       <VideoSlider />
