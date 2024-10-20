@@ -3,17 +3,16 @@
 import AutoScrollingTestimonialCarousel from "@/components/Feedback";
 
 import Landing from "../components/Landing";
-import VideoSlider from "@/components/Videos";
-import Clients from "../components/Clients";
 import Photos from "../components/Photos";
+import Clients from "../components/Clients";
 
 export default function Home() {
   return (
     <>
+      <Landing />
       <AutoScrollingTestimonialCarousel />
       <Photos />
-      <VideoSlider />
       <Clients />
-    </div>
+    </>
   );
 }
