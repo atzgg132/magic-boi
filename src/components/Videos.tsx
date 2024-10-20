@@ -1,76 +1,72 @@
-"use client";
+"use client"
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Slider from "react-slick";
-
-// You'll need to install these packages:
-// npm install react-slick slick-carousel
-
-// Don't forget to import the CSS files in your global CSS or page:
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
 
 const videos = [
-    { id: "dQw4w9WgXcQ", title: "Rick Astley - Never Gonna Give You Up" },
-    { id: "9bZkp7q19f0", title: "PSY - GANGNAM STYLE" },
-    { id: "kJQP7kiw5Fk", title: "Luis Fonsi - Despacito ft. Daddy Yankee" },
-    { id: "OPf0YbXqDm0", title: "Mark Ronson - Uptown Funk ft. Bruno Mars" },
-    { id: "JGwWNGJdvx8", title: "Ed Sheeran - Shape of You" },
+    { id: "hV60L12g-8Q", title: "TEDxCMRIT" },
+    { id: "wWSWEkg-nzc", title: "PSY - GANGNAM STYLE" },
+    { id: "2yaL6mKtsdI", title: "MOST SOUGHT AFTER CORPORATE ENTERTAINER" },
 ]
 
-function SampleNextArrow(props) {
-    const { onClick } = props
-    return (
-        <button
-            className="absolute right-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-md"
-            onClick={onClick}
-        >
-            <ChevronRight className="h-6 w-6 text-gray-800" />
-        </button>
-    )
-}
+export default function VideoSlider() {
+    const [currentIndex, setCurrentIndex] = useState(0)
 
-function SamplePrevArrow(props) {
-    const { onClick } = props
-    return (
-        <button
-            className="absolute left-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-md"
-            onClick={onClick}
-        >
-            <ChevronLeft className="h-6 w-6 text-gray-800" />
-        </button>
-    )
-}
+    const goToPrevious = () => {
+        const isFirstSlide = currentIndex === 0
+        const newIndex = isFirstSlide ? videos.length - 1 : currentIndex - 1
+        setCurrentIndex(newIndex)
+    }
 
-export default function Component() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+    const goToNext = () => {
+        const isLastSlide = currentIndex === videos.length - 1
+        const newIndex = isLastSlide ? 0 : currentIndex + 1
+        setCurrentIndex(newIndex)
     }
 
     return (
-        <div className="mx-auto max-w-4xl px-4 py-8">
-            <Slider {...settings}>
-                {videos.map((video) => (
-                    <div key={video.id} className="px-2">
-                        <div className="relative pb-[56.25%]">
-                            <iframe
-                                src={`https://www.youtube.com/embed/${video.id}`}
-                                title={video.title}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                className="absolute left-0 top-0 h-full w-full rounded-lg"
-                            />
-                        </div>
-                        <h2 className="mt-4 text-center text-lg font-semibold">{video.title}</h2>
-                    </div>
-                ))}
-            </Slider>
+        <div className="relative mx-auto max-w-5xl px-4 py-8 bg-gray-900">
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <div className="absolute inset-0">
+                    <iframe
+                        src={`https://www.youtube.com/embed/${videos[currentIndex].id}`}
+                        title={videos[currentIndex].title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="h-full w-full rounded-lg shadow-lg"
+                    />
+                </div>
+            </div>
+            <h2 className="mt-4 text-center text-xl font-semibold text-white">
+                {videos[currentIndex].title}
+            </h2>
+            <div className="mt-4 flex justify-between">
+                <button
+                    onClick={goToPrevious}
+                    className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                    aria-label="Previous video"
+                >
+                    <ChevronLeft className="h-6 w-6 text-gray-800" />
+                </button>
+                <div className="mt-4 flex justify-center space-x-2">
+                    {videos.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-gray-300" : "bg-gray-600"
+                                }`}
+                            aria-label={`Go to video ${index + 1}`}
+                        />
+                    ))}
+                </div>
+                <button
+                    onClick={goToNext}
+                    className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                    aria-label="Next video"
+                >
+                    <ChevronRight className="h-6 w-6 text-gray-800" />
+                </button>
+            </div>
         </div>
     )
 }
