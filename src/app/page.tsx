@@ -1,14 +1,17 @@
 "use client";
 
 import AutoScrollingTestimonialCarousel from "@/components/Feedback";
-import VideosComponent from "@/components/Videos";
+
+import VideoSlider from "@/components/Videos";
 import Clients from "../components/Clients";
+import Photos from "../components/Photos";
 
 export default function Home() {
   return (
     <div className="bg-gray-900">
       <AutoScrollingTestimonialCarousel />
-      <VideosComponent />
+      <Photos />
+      <VideoSlider />
       <Clients />
     </div>
   );
