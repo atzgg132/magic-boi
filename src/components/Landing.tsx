@@ -59,16 +59,6 @@ export default function Landing() {
         className="fixed w-10 h-10 bg-white rounded-full pointer-events-none mix-blend-difference z-50"
       />
 
-      <nav className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
-        <h1 className="text-2xl font-bold">VISH</h1>{" "}
-        {/* Vish is still in the nav */}
-        <div className="flex space-x-6">
-          <Button variant="ghost">About</Button>
-          <Button variant="ghost">Gallery</Button>
-          <Button variant="ghost">Contact</Button>
-        </div>
-      </nav>
-
       <motion.div
         ref={ref}
         style={{ y, opacity }}
