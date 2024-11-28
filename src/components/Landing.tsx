@@ -1,13 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   motion,
   useScroll,
   useTransform
 } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
 import landing from "@/assets/landing.jpg";
@@ -32,26 +31,26 @@ export default function Landing() {
     threshold: 0.1,
   });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const moveX = clientX - window.innerWidth / 2;
-      const moveY = clientY - window.innerHeight / 2;
-      const cursor = document.getElementById("custom-cursor");
-      cursor.style.left = `${clientX}px`;
-      cursor.style.top = `${clientY}px`;
-      cursor.style.transform = `translate(${moveX / 25}px, ${moveY / 25}px)`;
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     const { clientX, clientY } = e;
+  //     const moveX = clientX - window.innerWidth / 2;
+  //     const moveY = clientY - window.innerHeight / 2;
+  //     const cursor = document.getElementById("custom-cursor");
+  //     cursor.style.left = `${clientX}px`;
+  //     cursor.style.top = `${clientY}px`;
+  //     cursor.style.transform = `translate(${moveX / 25}px, ${moveY / 25}px)`;
+  //   };
 
-    window.addEventListener("mousemove", handleMouseMove);
+  //   window.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
 
   return (
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+    <main className="relative min-h-screen bg-black text-white overflow-hidden z-40">
       <div
         id="custom-cursor"
         className="fixed w-10 h-10 bg-white rounded-full pointer-events-none mix-blend-difference z-50"

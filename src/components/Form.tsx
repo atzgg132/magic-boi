@@ -44,7 +44,7 @@ const Page: React.FC = () => {
                 show={showAlert}
                 onClose={handleClosePopup}
             />
-            <div className="text-4xl md:text-5xl tracking-widest text-white font-thin uppercase mb-8 ">Contact us</div>
+            <div className="heading ">Contact us</div>
             <form action="" className="flex flex-col md:flex-row items-center justify-between h-3/5 bg-gray-900 p-6 rounded-lg cursor-pointer xl:w-2/5 md:w-3/5 w-full " onSubmit={handleSubmit}>
                 <div className="flex flex-col items-center justify-between h-full md:px-3 w-full">
                     <input

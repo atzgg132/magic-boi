@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -50,7 +49,7 @@ const TypewriterEffect = ({ text }: { text: string }) => {
 
 export default function UnforgettableMoments() {
   return (
-    <div className="relative w-full py-20 overflow-hidden">
+    <div className="relative w-full pt-20 overflow-hidden">
       {/* <div className="absolute inset-0 z-0 opacity-30">
         {[...Array(100)].map((_, i) => (
           <div
@@ -66,7 +65,7 @@ export default function UnforgettableMoments() {
           />
         ))}
       </div> */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,7 +115,7 @@ export default function UnforgettableMoments() {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
@@ -129,7 +128,7 @@ export default function UnforgettableMoments() {
           >
             KNOW MORE
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
       <style jsx>{`
         @keyframes twinkle {

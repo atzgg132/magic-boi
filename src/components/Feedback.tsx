@@ -80,14 +80,15 @@ export default function AutoScrollingTestimonialCarousel() {
   }, [nextTestimonial])
 
   return (
-    <section className="pb-16 " id="feedback">
-      <div className="container mx-auto px-4">
+    <section className="pb-16" id="feedback">
+      <div className="container mx-auto px-10">
         <div className="max-w-4xl mx-auto relative">
-          <h2 className="text-4xl md:text-5xl tracking-widest font-thin text-center mb-8 text-white uppercase">Client Testimonials</h2>
-          <div className="absolute top-0 right-0 space-x-2 z-10">
+          <h2 className="heading pb-10">Client Testimonials</h2>
+          <div className="relative bg-gray-900 border-gray-700 shadow-lg rounded-lg  ">
+            {/* Arrow Buttons */}
             <button
               onClick={prevTestimonial}
-              className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+              className="absolute left-[-24px] top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 "
               aria-label="Previous testimonial"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -96,16 +97,16 @@ export default function AutoScrollingTestimonialCarousel() {
             </button>
             <button
               onClick={nextTestimonial}
-              className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+              className="absolute right-[-24px] top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
               aria-label="Next testimonial"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-          </div>
-          <div className="bg-gray-900 border-gray-700 shadow-lg rounded-lg overflow-hidden">
-            <div className="relative h-[290px]">
+
+            {/* Testimonial Cards */}
+            <div className="relative h-[290px]  overflow-hidden">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -123,6 +124,7 @@ export default function AutoScrollingTestimonialCarousel() {
         </div>
       </div>
     </section>
+
   )
 }
 
